@@ -1,0 +1,22 @@
+{
+  "name": "Write on Web",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "This is used for the writing on the webpage similar to the Edge browser. So you can now present by writing on web",
+  "homepage_url": "http://danharper.me",
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "Inject!"
+  },
+  "permissions": [
+    "https://*/*",
+    "http://*/*",
+    "tabs",
+    "tabCapture"
+  ]
+}
