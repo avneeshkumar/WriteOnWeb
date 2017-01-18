@@ -1,9 +1,10 @@
 {
   "name": "Write on Web",
-  "version": "0.0.1",
+  "short_name":"WoW",
+  "version": "0.0.3",
   "manifest_version": 2,
   "description": "This is used for the writing on the webpage similar to the Edge browser. So you can now present by writing on web",
-  "homepage_url": "http://danharper.me",
+  "homepage_url": "https://github.com/avneeshkumar/WriteOnWeb",
   "background": {
     "scripts": [
       "background.js"
@@ -11,7 +12,12 @@
     "persistent": true
   },
   "browser_action": {
-    "default_title": "Inject!"
+    "default_icon": {                    
+            "16": "icons/Note-16.png",   
+            "24": "icons/Note-24.png",
+            "32": "icons/Note-32.png"        
+          },
+          "default_title": "Write on Web"
   },
   "permissions": [
     "https://*/*",
