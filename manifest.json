@@ -1,7 +1,7 @@
 {
   "name": "Write on Web",
   "short_name":"WoW",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "manifest_version": 2,
   "description": "This is used for the writing on the webpage similar to the Edge browser. So you can now present by writing on web",
   "homepage_url": "https://github.com/avneeshkumar/WriteOnWeb",
