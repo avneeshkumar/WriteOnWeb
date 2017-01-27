@@ -1,7 +1,7 @@
 {
   "name": "Write on Web",
   "short_name":"WoW",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "manifest_version": 2,
   "description": "This is used for the writing on the webpage similar to the Edge browser. So you can now present by writing on web",
   "homepage_url": "https://github.com/avneeshkumar/WriteOnWeb",
@@ -22,6 +22,9 @@
     "default_icon": "icons/Note-128.png",
     "default_title": "Write on Web"
   },
+  "web_accessible_resources": [
+    "images/*.png"
+  ],
   "permissions": [
     "https://*/*",
     "http://*/*",

@@ -10,8 +10,8 @@
 
 	if ($(".toolsoftheextension")[0]){
     // Do something if class exists
-    	$( ".toolsoftheextension" ).remove();
-    	$( "#canvasdivoftheextension" ).remove();
+    	$( ".toolsoftheextension" ).toggle();
+    	$( "#canvasdivoftheextension" ).toggle();
 
 
 	} else {
@@ -21,8 +21,8 @@
 		var div = document.createElement('div');
 		div.className = 'toolsoftheextension';
 		div.style.width="100%";
-		div.style.height="7.5%";
-		div.style.backgroundColor="#808080";
+		div.style.height="6%";
+		
 		div.style.zIndex = 2147483647;
 		div.style.position = 'fixed';
 		//document.body.appendChild(div);
@@ -33,6 +33,8 @@
 
 		
 		// just place a div at top right
+		var eraserUrl=chrome.extension.getURL("/images/eraser.png");
+		var markerUrl=chrome.extension.getURL("/images/marker.png");
 		var canvasdiv = document.createElement('div');
 		canvasdiv.id="canvasdivoftheextension";
 		canvasdiv.style.width="100%";
@@ -53,11 +55,12 @@
 	      $('.toolsoftheextension').append("<a href='#colors_sketch' data-color='" + this + "' style='width: 30px;margin-top:0.4em; height: 30px; background: " + this + ";display: inline-block;'></a> ");
 	    });
 	    $.each([3, 5, 10, 15], function(index, value) {
-	      $('.toolsoftheextension').append("<a href='#colors_sketch' data-size='" + this  + "' style=' margin-bottom:1em;background: #ccc;font-size:x-large;'>" + this  + "</a> ");
+	      $('.toolsoftheextension').append("<a href='#colors_sketch' data-size='" + this  + "' style=' padding:0.1em;background: #ccc;font-size:x-large;'>" + this  + "</a> ");
 	    });
-	    $('.toolsoftheextension').append('<a href="#colors_sketch" data-tool="marker" style="margin:10px;" width: 100px;>Marker</a>');
-	    $('.toolsoftheextension').append('<a href="#colors_sketch" data-tool="eraser" style="margin:10px">Eraser</a>');
+	    $('.toolsoftheextension').append('<a href="#colors_sketch" data-tool="marker" style="margin:10px;"><img src="'+markerUrl+'" alt="Eraser" height="30" width="30"></a></a>');
+	    $('.toolsoftheextension').append('<a href="#colors_sketch" data-tool="eraser" style="margin:10px;"><img src="'+eraserUrl+'" alt="Eraser" height="30" width="30"></a>');
 	    $('#colors_sketch').sketch();
+	    //$('#colors_sketch').sketch().color='#f00';
 	    $('#downloadbuttonofextension').click(function(){
 	    	alert("aaya");
 	    	chrome.tabs.captureVisibleTab(null, {format : "png",quality : 100}, function (image) {
