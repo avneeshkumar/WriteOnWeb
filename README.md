@@ -4,6 +4,6 @@ The extension for the Chrome that mimics the Write On Web feature of Edge browse
 ## Download ZIP File and unzip it.
 ## Go to chrome->Extension->Enable Developer Mode
 ## Load Unpacked Extension-> Select the folder which you just extracted
-## [Chrome Extension Store](https://chrome.google.com/webstore/detail/write-on-web/)
+## [Chrome Extension Store](https://chrome.google.com/webstore/detail/write-on-web/fhdnnnonejjamkdfpeckggkaejdjhpen)
 
 
